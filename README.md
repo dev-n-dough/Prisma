@@ -1,66 +1,12 @@
-## Foundry
+# Prisma
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+A vault made on hyperliquid, which runs a custom strategy to generate yield for its users
 
-Foundry consists of:
+## Technical Components
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
-
-## Documentation
-
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
-
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+- Using Boring-Vault architecture by Veda 
+- Implements Staking and Unstaking on `stakedhype.fi`
+- Interacts with `Felix Vanilla Markets` to supply collateral and borrow Hype.
+- Creates a leveraged loop, which generates yield
+- User deposits, withdrawals, vault access controls, tvl guard - all are implemented inside the boring vault architechture
+- 
